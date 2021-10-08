@@ -12,6 +12,7 @@ public class ImplementingLambda {
         System.out.println("Calculator started!!");
     }*/
 
+    CalculatorStarter calculatorStarter = ()-> System.out.println("Calculation started!!");
 
 
     public static void main(String[] args) {
