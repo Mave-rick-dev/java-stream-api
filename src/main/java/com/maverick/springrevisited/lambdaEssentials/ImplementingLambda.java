@@ -1,4 +1,4 @@
-package com.maverick.springrevisited.streamAPI;
+package com.maverick.springrevisited.lambdaEssentials;
 
 interface CalculatorStarter{
     void startCalculator();

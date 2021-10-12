@@ -1,4 +1,4 @@
-package com.maverick.springrevisited.streamAPI;
+package com.maverick.springrevisited.lambdaEssentials;
 
 /**
  * Lambda expression: Java expression through which we can represent anonymous function
