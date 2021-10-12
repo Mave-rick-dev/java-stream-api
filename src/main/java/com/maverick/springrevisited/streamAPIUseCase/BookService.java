@@ -2,7 +2,6 @@ package com.maverick.springrevisited.streamAPIUseCase;
 
 
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class BookService {
@@ -25,6 +24,7 @@ public class BookService {
 
     public static void main(String[] args) {
         System.out.println(new BookService().getAllBooks());
+        System.out.println(new BookService().inReverse());
     }
 }
 
