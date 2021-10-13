@@ -51,7 +51,8 @@ class ConsumerUseCase {
         superHeroes.add(new SuperHero("Batman", 8));
         superHeroes.add(new SuperHero("Green Lantern", 5));
 
-        superHeroes.stream().forEach(superHero -> {
+
+        superHeroes.forEach(superHero -> {
             if (superHero.getPower().equalsIgnoreCase("superman")) {
                 System.out.println("It is superman!!");
             } else {
