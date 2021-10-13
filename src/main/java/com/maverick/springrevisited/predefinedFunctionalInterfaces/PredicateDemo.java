@@ -1,10 +1,8 @@
 package com.maverick.springrevisited.predefinedFunctionalInterfaces;
 
-import com.maverick.springrevisited.streamAPIUseCase.Book;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.List;
 import java.util.function.Predicate;
 
@@ -17,15 +15,16 @@ class Song {
     private String artistName;
 }
 
-public class PredicateDemo implements Predicate<Song> {
-    @Override
+public class PredicateDemo //implements Predicate<Song>
+         {
+    /*@Override
     public boolean test(Song song) {
         if (song.getArtistName().equalsIgnoreCase("Logic")) {
             return true;
         } else {
             return false;
-        }
-    }
+        }*/
+
 
     public static void main(String[] args) {
         List<Song> songList = List.of(
