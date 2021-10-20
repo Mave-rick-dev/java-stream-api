@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BookDao {
 
-    public List<Book> getAllBooks() {
+    public static List<Book> getAllBooks() {
         List<Book> books = new ArrayList<>();
         books.add(new Book(1, "Mystery of Black Holes", 200));
         books.add(new Book(2, "Psycho-analytics essentials", 300));
