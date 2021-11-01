@@ -14,6 +14,7 @@ public class StreamSortDemo {
      * Suppose we want to sort a mutable list as below
      */
     public static void main(String[] args) {
+        List<String> names = new ArrayList<>();
 
         /*List<String> drinks = new ArrayList<>();
         drinks.add("Cocacola");
@@ -36,16 +37,30 @@ public class StreamSortDemo {
          */
 
        /* drinks.stream().sorted().forEach(drink -> System.out.println(drink));//in asc order
-        drinks.stream().sorted(Comparator.reverseOrder()).forEach(drink -> System.out.println(drink));//in desc order*/
+        drinks.stream().sorted(Comparator.reverseOrder())
+            .forEach(drink -> System.out.println(drink));//in desc order*/
 
         /**
          * Custom sorting with a specific field
          */
 
         List<Book> books = BookDao.getAllBooks();
-        System.out.println(books);
 
-        Collections.sort(books, new MyComparator());
+        //Collections.sort(books, new MyComparator());
+        //System.out.println(books);
+
+        /*Collections.sort(books, (book1, book2)->
+             book2.getPages() - book1.getPages()
+        );
+        System.out.println(books);*/
+
+        /**
+         * Stream sorting:
+         *  - uses Comparator<T> to print book in asc order
+         */
+        books.stream()
+                .sorted((b1, b2)-> b1.getPages()-b2.getPages())
+                .forEach(book -> System.out.println(book));
     }
 }
 
