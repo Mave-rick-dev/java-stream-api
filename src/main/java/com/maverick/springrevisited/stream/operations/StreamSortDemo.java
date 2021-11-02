@@ -59,8 +59,28 @@ public class StreamSortDemo {
          *  - uses Comparator<T> to print book in asc order
          */
         books.stream()
-                .sorted((b1, b2)-> b1.getPages()-b2.getPages())
-                .forEach(book -> System.out.println(book));
+                .sorted((book1, book2) -> book2.getPages() - book1.getPages());
+                //.sorted(Comparator.comparingInt(Book::getPages))//asc
+                //.forEach(book -> System.out.println(book));
+                //.forEach(System.out::println);//alternative to above forEach
+
+        /**
+         * Functional method of java.util.function.Function: R apply(T t)
+         *  - R = return type of the function
+         *  - T = method argument type
+         * i.e. Function interface defines a generic function with
+         *  method argument of type T which returns type of R
+         *
+         *  comparing(Function<T>)
+         *  - Book::getName = sort by name (asc)
+         *  - Book::getId = sort by id (asc)
+         *  - Book::getPages = sort by pages (asc)
+         */
+
+
+        books.stream()
+                .sorted(Comparator.comparing(Book::getName))
+                .forEach(System.out::println);
     }
 }
 
